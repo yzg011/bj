@@ -24,7 +24,7 @@
       "creationMode": "file",
       "indexFileName": "",
       "ignoreSubfolders": false,
-      "enableUnderscorePrefix": true,
+      "enableUnderscorePrefix": false,
       "useMdxExtension": false,
       "modifiedDateField": ""
     }
