@@ -1,67 +1,48 @@
 ---
-sticky: 1
+title: 关于
+date: 2024-07-19 16:41:10
+type: "about"
 ---
-# 关于主题
 
-简约风的 Vitepress 博客主题，基于 [vitepress](https://vitepress.dev/) 的自定义主题实现
+# 关于我 / About Me
 
-![图片](https://img.cdn.sugarat.top/mdImg/MTY3MzE3MDUxOTMwMw==673170519303~fmt.webp)
+你好！欢迎来到我的个人空间。这里记录了我的技术成长、生活随笔以及一些有趣的想法。
 
-更多细节见 https://theme.sugarat.top
+## 📬 联系我
 
-## 已支持功能
-介绍一下主要的，非所有
-
-* 博客首页
-* 文章列表
-* 精选文章
-* 友链
-* 标签分类
-* 图片预览
-* 搜索（基于[pagefind](https://github.com/cloudcannon/pagefind)支持离线全文搜索）
-* [giscus](https://giscus.app/zh-CN)驱动的评论系统
-* 推荐文章（类似文章目录）
-* 阅读时间计算
-* 全局的提示弹窗 (由 el-alert 驱动)
-* 全局的公告弹窗，支持设置图片，文字，按钮
-* 作品聚合页（为个人作品提供一个展示）
-* tabs（[vitepress-plugin-tabs](https://vitepress-plugins.sapphi.red/tabs/)）
-* 流程图（[vitepress-plugin-mermaid](https://github.com/emersonbottero/vitepress-plugin-mermaid#readme)）
-* RSS
-* 主题色统一
-* 更多可定制的主题样式
-
-## 规划中功能
-* Valine 评论系统
-* 文章合集（类似于聚合一个内容专题）
-* 文章时间线页面支持
-* 背景图自动更换
-* 首屏铺满slogan，参考reco
-
-## 参考项目
-或多或少借鉴&使用了如下的一下开源项目，博客，网站的能力或者UI样式
-
-* [reco](https://vuepress-theme-reco.recoluan.com/)
-* [掘金](https://juejin.cn/)
-* [surmon](https://surmon.me/) 
-* [@vue/theme](https://github.com/vuejs/theme)
-* [vitest](https://vitest.dev/)
-* [element-plus](https://element-plus.gitee.io/zh-CN/)
-* [charles7c.github.io](https://github.com/Charles7c/charles7c.github.io)
-* [vitepress-blog-zaun](https://github.com/clark-cui/vitepress-blog-zaun)
-* [vuejs/blog](https://github.com/vuejs/blog/tree/main)
-* [列表无限滚动轮播效果](https://code.juejin.cn/pen/7145007064350195748)
-
-## 主题相关资源
-* 主题地址：https://theme.sugarat.top/
-* 主题包：[@sugarat/theme](https://www.npmjs.com/package/@sugarat/theme)
-* 项目地址：https://github.com/ATQQ/sugar-blog/tree/master/packages/theme
-* 作者博客地址：https://sugarat.top
+如果你对我的文章感兴趣，或者有任何问题想要交流，欢迎通过以下方式联系我：
 
 
-## 最后
-如果你有建议的 功能&想法 欢迎 私信&评论区 交流
 
-如果你觉得主题不错，欢迎分享与使用，可以在评论区留下你的网站地址
 
-笔者后续会单独开个板块展示大家优秀的博客，感谢大家的支持
+### 📬 网站RSS地址：https://com.z2m.store/atom.xml
+
+### 💬 微信公众号
+
+欢迎关注我的公众号，获取最新的技术分享和深度文章推送。
+
+<div align="center">
+  <img src="https://img.z2m.store/file/1779067710712_1.png" alt="微信公众号二维码" width="258" height="258" style="border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+  <p><em>长按识别图中二维码关注</em></p>
+</div>
+
+---
+
+### 🛠️ [客服/业务联系](https://work.weixin.qq.com/kfid/kfc90518b0eacba59c3  "客服/业务联系")
+
+如果有商务合作、技术咨询或需要人工客服支持，请扫描下方的客服二维码添加好友。
+
+<div align="center">
+  <img src="https://img.z2m.store/file/1779007352749_wx00001.jpg" alt="客服微信二维码" width="258" height="258" style="border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+  <p><em>扫码添加客服微信</em></p>
+</div>
+
+
+
+
+
+
+
+
+
+感谢你的阅读与支持！
