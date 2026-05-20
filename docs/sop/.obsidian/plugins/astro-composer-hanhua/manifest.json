@@ -1,0 +1,11 @@
+{
+	"id": "astro-composer",
+	"name": "Astro Composer fqzlr",
+	"version": "0.12.0",
+	"minAppVersion": "1.11.0",
+	"description": "将你的笔记转换为 Astro 博客的文章和页面，具备自动化内容管理功能。",
+	"author": "David V. Kimball",
+	"authorUrl": "https://davidvkimball.com",
+	"fundingUrl": "https://patreon.com/davidvkimball",
+	"isDesktopOnly": false
+}

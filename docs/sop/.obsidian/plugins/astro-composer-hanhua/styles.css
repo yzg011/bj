@@ -1,0 +1,378 @@
+/* 标题输入框样式 */
+.astro-composer-title-input {
+	width: 100%;
+	margin-bottom: 16px;
+	padding: 8px;
+}
+
+/* 按钮容器样式 */
+.astro-composer-button-container {
+	display: flex;
+	gap: 8px;
+	justify-content: flex-end;
+	margin-top: 16px;
+}
+
+/* 确保按钮容器内的所有按钮使用默认光标 */
+.astro-composer-button-container button {
+	cursor: default !important;
+}
+
+.astro-composer-button-container button:hover {
+	cursor: default !important;
+}
+
+/* 取消/创建按钮基础样式 */
+.astro-composer-cancel-button,
+.astro-composer-create-button {
+	padding: 6px 12px;
+	border-radius: 4px;
+	cursor: default !important;
+}
+
+.astro-composer-cancel-button:hover,
+.astro-composer-create-button:hover {
+	cursor: default !important;
+}
+
+/* 主要操作按钮样式 */
+.astro-composer-create-button.mod-cta {
+	background-color: var(--interactive-accent);
+	color: var(--text-on-accent);
+	cursor: default !important;
+}
+
+.astro-composer-create-button.mod-cta:hover {
+	background-color: var(--interactive-accent-hover);
+	cursor: default !important;
+}
+
+/* 模板文本域样式 */
+.astro-composer-template-textarea {
+	height: 300px; /* 调整为可容纳5-10行属性 */
+	width: 100%;
+	padding: 8px;
+	resize: vertical; /* 允许垂直调整大小 */
+	margin-bottom: 16px;
+}
+
+/* 模态框基础样式 */
+.astro-composer-modal {
+	padding: 20px;
+	max-width: 500px;
+	margin: 0 auto;
+}
+
+.astro-composer-modal h2 {
+	margin-top: 0;
+}
+
+/* 自定义内容类型样式 */
+.custom-content-types-container {
+	margin-top: 0;
+}
+
+.custom-content-type-item {
+	border: 1px solid var(--background-modifier-border);
+	border-radius: 6px;
+	padding: 16px;
+	margin-bottom: 16px;
+	background-color: var(--background-secondary);
+}
+
+.custom-content-type-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.custom-content-type-header .setting-item {
+	margin-bottom: 0;
+}
+
+.custom-content-type-header .setting-item-name {
+	font-weight: 600;
+	color: var(--text-normal);
+}
+
+.custom-content-type-item .setting-item {
+	margin-bottom: 12px;
+}
+
+.custom-content-type-item .setting-item:last-child {
+	margin-bottom: 0;
+}
+
+/* 自定义内容类型设置项间距（移除分隔线后） */
+.custom-content-type-settings > div {
+	margin-bottom: 16px;
+}
+
+.custom-content-type-settings > div:last-child {
+	margin-bottom: 0;
+}
+
+/* 自定义内容类型设置项过渡动画 */
+.custom-content-type-settings {
+	transition: all 0.2s ease-in-out;
+	padding-top: 12px;
+}
+
+.custom-content-type-settings[style*="none"] {
+	opacity: 0;
+	transform: translateY(-10px);
+}
+
+/* Astro Composer模态框移动端优化 */
+@media (max-width: 768px) {
+	/* 强制包含本插件内容的模态框使用移动端定位 */
+	.modal:has(.astro-composer-title-input) {
+		position: fixed !important;
+		top: 10% !important;
+		left: 50% !important;
+		transform: translateX(-50%) !important;
+		max-height: 50vh !important;
+		overflow-y: auto !important;
+		width: 90vw !important;
+		max-width: 500px !important;
+	}
+	
+	/* 仅针对本插件的模态框内容，不影响所有模态框 */
+	.modal .astro-composer-title-input {
+		font-size: 16px; /* 防止iOS端缩放 */
+		padding: 12px;
+		border: 1px solid var(--background-modifier-border);
+		border-radius: 4px;
+	}
+	
+	/* 确保模态框内容在移动端尺寸适配 */
+	.modal .astro-composer-button-container {
+		flex-direction: column;
+		gap: 12px;
+	}
+	
+	.modal .astro-composer-cancel-button,
+	.modal .astro-composer-create-button {
+		width: 100%;
+		padding: 12px;
+		font-size: 16px;
+		cursor: default !important;
+	}
+	
+	.modal .astro-composer-cancel-button:hover,
+	.modal .astro-composer-create-button:hover {
+		cursor: default !important;
+	}
+}
+
+/* 不支持:has()选择器的浏览器降级方案 */
+.astro-composer-mobile-modal {
+	position: fixed !important;
+	top: 10% !important;
+	left: 50% !important;
+	transform: translateX(-50%) !important;
+	max-height: 50vh !important;
+	overflow-y: auto !important;
+	width: 90vw !important;
+	max-width: 500px !important;
+}
+
+/* 设置界面工具类 */
+.astro-composer-setting-container-visible {
+	display: block;
+}
+
+.astro-composer-setting-container-hidden {
+	display: none;
+}
+
+.astro-composer-custom-type-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 8px;
+}
+
+.astro-composer-header-name {
+	flex: 1;
+	min-width: 0;
+}
+
+/* 折叠按钮样式 */
+.astro-composer-collapse-button {
+	background: transparent !important;
+	border: none !important;
+	padding: 4px;
+	margin-right: 4px;
+	cursor: default;
+	color: var(--text-muted);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 4px;
+	transition: background-color 0.2s ease, color 0.2s ease;
+	box-shadow: none !important;
+}
+
+.astro-composer-collapse-button:hover {
+	background-color: var(--background-modifier-hover);
+	color: var(--text-normal);
+}
+
+.astro-composer-collapse-button:active {
+	background-color: var(--background-modifier-active);
+}
+
+.astro-composer-collapse-button svg {
+	transition: transform 0.2s ease;
+}
+
+.astro-composer-collapse-button.is-collapsed svg {
+	transform: rotate(-90deg);
+}
+
+/* 排序按钮容器 */
+.astro-composer-reorder-buttons {
+	display: flex;
+	flex-direction: row;
+	gap: 4px;
+	margin-right: 8px;
+	align-items: center;
+}
+
+/* 排序按钮 - 仅图标极简样式 */
+.astro-composer-reorder-button {
+	background: transparent !important;
+	border: none !important;
+	padding: 4px;
+	cursor: default;
+	color: var(--text-muted);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 4px;
+	transition: background-color 0.2s ease, color 0.2s ease;
+	line-height: 1;
+	opacity: 0.6;
+	box-shadow: none !important;
+}
+
+.astro-composer-reorder-button:hover:not(:disabled) {
+	background-color: var(--background-modifier-hover);
+	color: var(--text-normal);
+	opacity: 1;
+}
+
+.astro-composer-reorder-button:active:not(:disabled) {
+	background-color: var(--background-modifier-active);
+}
+
+.astro-composer-reorder-button:disabled {
+	opacity: 0.2;
+	cursor: default;
+}
+
+.astro-composer-reorder-button svg {
+	width: 16px;
+	height: 16px;
+}
+
+.astro-composer-remove-setting {
+	border-top: none;
+}
+
+.astro-composer-add-button {
+	border-top: none;
+}
+
+/* 浮动按钮容器 - 无背景，右对齐 */
+.astro-composer-add-button-container {
+	display: flex;
+	justify-content: flex-end;
+	margin-top: 16px;
+	margin-bottom: 0;
+	padding: 0;
+	background: transparent;
+	border: none;
+}
+
+.astro-composer-add-button-container button {
+	margin: 0;
+}
+
+/* 设置标签页 - 隐藏的设置元素 */
+/* 仅隐藏设置项的信息元素，不隐藏内容类型内的嵌套元素 */
+.astro-composer-setting-hidden-elements > .setting-item-info > .setting-item-name,
+.astro-composer-setting-hidden-elements > .setting-item-info > .setting-item-description,
+.astro-composer-setting-hidden-elements > .setting-item-control {
+	display: none;
+}
+
+.astro-composer-setting-hidden-elements {
+	border-top: none;
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+.astro-composer-setting-container-full-width {
+	display: block;
+	width: 100%;
+}
+
+.astro-composer-custom-types-container-visible {
+	display: block !important;
+	width: 100% !important;
+	visibility: visible !important;
+}
+
+/* 确保自定义内容类型容器在父元素隐藏时仍可见 */
+.astro-composer-setting-hidden-elements .custom-content-types-container {
+	display: block !important;
+	visibility: visible !important;
+}
+
+/* 确保容器内的内容类型项可见 */
+.custom-content-types-container .custom-content-type-item {
+	display: block !important;
+	visibility: visible !important;
+}
+
+/* 冲突警告样式 */
+.astro-composer-conflict-warning {
+	color: var(--text-warning);
+	font-size: 0.9em;
+	margin-top: 0.5em;
+}
+
+.astro-composer-conflict-warning.hidden {
+	display: none;
+}
+
+/* 帮助按钮替换样式 */
+/* 无需特殊显示 - 继承父级弹性容器样式 */
+
+/* 功能区上下文菜单隐藏 - 通过类名生效 */
+.astro-composer-hide-terminal-icon .menu-item:has(svg[data-lucide="terminal-square"]),
+.astro-composer-hide-terminal-icon .menu-item:has(.lucide-terminal-square),
+.astro-composer-hide-terminal-icon .menu-item .menu-item-icon:has(svg[data-lucide="terminal-square"]),
+.astro-composer-hide-terminal-icon .menu-item .menu-item-icon:has(.lucide-terminal-square) {
+	display: none !important;
+}
+
+.astro-composer-hide-config-icon .menu-item:has(svg[data-lucide="wrench"]),
+.astro-composer-hide-config-icon .menu-item:has(svg[data-lucide="rocket"]),
+.astro-composer-hide-config-icon .menu-item:has(.lucide-wrench),
+.astro-composer-hide-config-icon .menu-item:has(.lucide-rocket),
+.astro-composer-hide-config-icon .menu-item .menu-item-icon:has(svg[data-lucide="wrench"]),
+.astro-composer-hide-config-icon .menu-item .menu-item-icon:has(svg[data-lucide="rocket"]),
+.astro-composer-hide-config-icon .menu-item .menu-item-icon:has(.lucide-wrench),
+.astro-composer-hide-config-icon .menu-item .menu-item-icon:has(.lucide-rocket) {
+	display: none !important;
+}
+
+/* 帮助按钮隐藏 */
+.astro-composer-hide-help-button .workspace-drawer-vault-actions .clickable-icon:has(svg.help) {
+	display: none !important;
+}
+
+/* 仅作用于本插件的设置容器，避免影响其他插件 */
