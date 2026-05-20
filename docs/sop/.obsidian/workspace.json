@@ -11,10 +11,14 @@
             "id": "bc26a9b20fa0ce1e",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "git指令学习.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "新标签页"
+              "title": "git指令学习"
             }
           }
         ]
@@ -193,6 +197,8 @@
   },
   "active": "bc26a9b20fa0ce1e",
   "lastOpenFiles": [
+    "component.md",
+    "git指令学习.md",
     "w11-faq.md",
     "pushoo.js 让twikoo推送消息到指定app.md",
     "quickStart.md",
