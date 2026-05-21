@@ -8,7 +8,7 @@ const baseUrl = 'https://bj.z2m.store'
 const RSS: Theme.RSSOptions = {
   title: '安防圈',
   baseUrl,
-  copyright: '@SAIMEN',
+  copyright: 'MIT License | SAIMEN',
   description: '个人技术笔记，安防笔记',
   language: 'zh-cn',
   image: 'https://img.z2m.store/file/public/1778862620159_g.png',
@@ -47,7 +47,7 @@ const blogTheme = getThemeConfig({
   footer: {
     // message 字段支持配置为HTML内容，配置多条可以配置为数组
     // message: '下面 的内容和图标都是可以修改的噢（当然本条内容也是可以隐藏的）',
-    copyright: '@Saimen',
+    copyright: 'MIT License | Saimen',
     // icpRecord: {
     //   name: '蜀ICP备19011724号',
     //   link: 'https://beian.miit.gov.cn/'
@@ -76,13 +76,26 @@ const blogTheme = getThemeConfig({
       url: 'https://com.z2m.store',
     },
     {
-      nickname: 'Vitepress',
-      des: 'Vite & Vue Powered Static Site Generator',
+      nickname: '免费图床',
+      des: '永久免费图床',
       avatar:
-        'https://vitepress.dev/vitepress-logo-large.webp',
-      url: 'https://vitepress.dev/',
+        'https://img.z2m.store/file/public/1779343852877_pic.png',
+      url: 'https://img.z2m.store',
     },
-
+    {
+      nickname: 'Saimen homepage',
+      des: '作者的主页空间',
+      avatar:
+        'https://img.z2m.store/file/public/1778862620159_g.png',
+      url: 'https://home.z2m.store',
+    },
+    {
+      nickname: '小鱼钓猫🐱',
+      des: '另一博客空间',
+      avatar:
+        'https://img.z2m.store/file/public/1778862620159_g.png',
+      url: 'https://blog.z2m.store/',
+    },
     ],
     // 开启顺序随机
     random: true,

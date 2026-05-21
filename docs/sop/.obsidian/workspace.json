@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "4b7a3b2828c64fc3",
+        "id": "32e9e97078234e58",
         "type": "tabs",
         "children": [
           {
-            "id": "ea450cd83f57b269",
+            "id": "0d34a38a2b152e65",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -191,8 +191,9 @@
       "astro-composer:打开项目终端": false
     }
   },
-  "active": "ea450cd83f57b269",
+  "active": "0d34a38a2b152e65",
   "lastOpenFiles": [
+    "butterfly.md",
     "discuss.md",
     "打赏.md",
     "more.md",
