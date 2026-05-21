@@ -4,6 +4,13 @@ import { defineConfig } from 'vitepress'
 import { blogTheme } from './blog-theme'
 
 
+import { giscusPlugin } from 'vitepress-plugin-giscus'
+
+
+//主要作用是在文章底部添加打赏模块：
+// ✅ 正确导入 SponsorPlugin
+import { SponsorPlugin } from 'vitepress-plugin-sponsor'
+
 // 如果使用 GitHub/Gitee Pages 等公共平台部署
 // 通常需要修改 base 路径，通常为“/仓库名/”
 // 如果项目名已经为 name.github.io 域名，则不需要修改！
@@ -14,9 +21,6 @@ import { blogTheme } from './blog-theme'
 // Vitepress 默认配置
 // 详见文档：https://vitepress.dev/reference/site-config
 export default defineConfig({
-
-
-
 
   // 继承博客主题(@sugarat/theme)
   extends: blogTheme,
@@ -59,7 +63,33 @@ export default defineConfig({
         link: 'https://github.com/yzg011'
       }
     ]
-  }
+  },
+  
+        // ✅ vite 配置放在顶层，不是 themeConfig 内部！
+    vite: {
+      plugins: [
+        SponsorPlugin({
+          type: 'simple',
+          aliPayQR: 'https://img.z2m.store/file/public/1778862804232_650.jpeg',
+          weChatQR: 'https://img.z2m.store/file/public/1778862803338_74ffc28ec36caf0f44dd90b066a20561.jpeg'
+          }),
+      giscusPlugin({
+        repo: 'yzg011/homepage',
+        repoId: 'R_kgDOScMRQQ',
+        category: 'General',
+        categoryId: 'DIC_kwDOScMRQc4C9dup',
+        mapping: 'pathname',
+        // ...其他 giscus 配置
+      })		  
+		  
+		  
+		  
+        ]
+      }
+  
+  
+  
+  
 })
 
 
