@@ -5,5 +5,8 @@ import BlogTheme from '@sugarat/theme'
 
 // 自定义主题色
 // import './user-theme.css'
+import './style/index.css'
+
+
 
 export default BlogTheme
