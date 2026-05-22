@@ -4,17 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "32e9e97078234e58",
+        "id": "3b1c74825faa5ea2",
         "type": "tabs",
         "children": [
           {
-            "id": "0d34a38a2b152e65",
+            "id": "34f505fa9c865193",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "两块ESP32屏了解会议室状态.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "新标签页"
+              "title": "两块ESP32屏了解会议室状态"
             }
           }
         ]
@@ -191,8 +195,14 @@
       "astro-composer:打开项目终端": false
     }
   },
-  "active": "0d34a38a2b152e65",
+  "active": "34f505fa9c865193",
   "lastOpenFiles": [
+    "印度STQC 流程和批准要求.md",
+    "印度STQC认证所需文件.md",
+    "两块ESP32屏了解会议室状态.md",
+    "开启评论.md",
+    "发布指令.md",
+    ".md",
     "converted_20260522T012116.md",
     "技术支持知识库.html",
     "discuss - 副本.md",
@@ -210,16 +220,11 @@
     "style.md",
     "上传指令.md",
     "免费图床.md",
-    "开启评论.md",
-    "发布指令.md",
     "部署Twikoo到cloudflaer.md",
     "4-g.md",
     "about.md",
     "component.md",
     ".md",
-    "blog添加algolia搜索.md",
-    "about1.md",
-    "git指令学习.md",
-    "pushoo.js 让twikoo推送消息到指定app.md"
+    "blog添加algolia搜索.md"
   ]
 }
