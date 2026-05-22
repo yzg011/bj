@@ -32,7 +32,7 @@ const blogTheme = getThemeConfig({
   recommend: {
     title: '🔍 相关文章',
     nextText: '换一组',
-    pageSize: 9,
+    pageSize: 10,
     empty: '暂无相关文章',
     style: 'sidebar',
     sort: 'date',
@@ -79,7 +79,7 @@ const blogTheme = getThemeConfig({
       nickname: '免费图床',
       des: '永久免费图床',
       avatar:
-        'https://img.z2m.store/file/public/1779343852877_pic.png',
+        'https://img.z2m.store/file/public/1779443156389_imglogo.png',
       url: 'https://img.z2m.store',
     },
     {
