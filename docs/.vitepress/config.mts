@@ -55,7 +55,7 @@ export default defineConfig({
     // },
     nav: [
       { text: '首页', link: '/' },
-	  { text: '朋友圈', link: 'https://py.z2m.store' },
+	  { text: '朋友圈', link: '../py.md' },
       { text: '关于作者', link: '../about.md' }
     ],
     socialLinks: [
