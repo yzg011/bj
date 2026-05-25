@@ -56,6 +56,7 @@ export default defineConfig({
     nav: [
       { text: '首页', link: '/' },
 	  { text: '朋友圈', link: '../py.md' },
+	  { text: '友链', link: '../friends.md' },
       { text: '关于作者', link: '../about.md' }
     ],
     socialLinks: [
