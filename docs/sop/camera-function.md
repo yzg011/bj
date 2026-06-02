@@ -1,0 +1,95 @@
+---
+title: 摄像机常用功能英语表达
+date: 2026-06-02
+tags:
+  - 安防
+---
+| Function/Features |  | Explanation |
+| --- | --- | --- |
+|  | HD/SD | Switch video quality between high definition and standard definition to manage clarity and data usage |
+|  | Speaker ON/OFF | Enable or disable audio from the camera |
+|  | Fit to screen | Adjust video display to fit the mobile screen |
+|  | PAN/TILT in Full screen mode | PAN/TILT camera in full screen mode |
+|  | Signal Strength | Shows network/Wi-Fi signal quality |
+|  | Full screen Mode | See the camera view in Landscape mode |
+| Features shortcuts | Playback: Timeline/Calendar Play/Pause Fast Forward/Rewind Record Filter Download | Select recordings based on date and time Control playback of recorded video Quickly navigate through recordings Filter recordings like motion or continuous Download the Playback |
+|  | Motion tracking ON/OFF | Enable or disable Motion tracking setting |
+|  | MIC On/Off | Enable or disable 2-way communication |
+|  | Motion Detection ON/OFF |  |
+|  | Siren On/Off | Turn On or Turn Off Siren manually |
+|  | Patrol On/Off | Start or Stop camera patroling feature |
+|  | Privacy Mode On/OFF | Turn on or Turn Off Privacy Mode in camera |
+|  | Gallery | View and share the Local record Image/Snapshot |
+|  | Anti-Flicker (50Hz/60Hz/Off) | Reduces screen flickering caused by artificial lights (like tube lights), ensuring smoother video |
+|  | Light Control | Enable or disable white LED (supported cameras) |
+|  | Night Vision | Switch camera mode IR/Color/Smart mode |
+|  | Audible Alaram | Enable or disable pre-recorded prompt/Alarm/etc on the camera |
+|  |  |  |
+|  | Notification Center | See all the received events notifications in application |
+|  | PT/Directional Buttons | Rotates camera Pan/Tilt using direction buttons |
+|  | Preset | Create, Delete, Call Preset of camera |
+|  | Feature | Open Feature shortcuts |
+| Playback | SD Card Playback | Play SD card recording |
+|  | Speaker ON/OFF | Enable or disable audio of playback |
+|  | Timeline/Calendar | Select recordings based on date and time |
+|  | Play/Pause | Control playback of recorded video |
+|  | Fast Forward/Rewind | Quickly navigate through recordings |
+|  | Record Filter | Filter recordings like motion or continuous |
+|  | Download | Download the Playback |
+|  | SD card encryption | TF card playback encryption |
+|  | Cloud playback | If  not subscribed, allow users to purchase If subscribed: all users to check Cloud playback |
+| Camera Model | Camera Icon | Change camera icon/image |
+|  | Camera Name | Rename the Camera |
+| Image Settings | Image Setting | Brightness: Adjusts how light or dark the video appears. Increasing brightness makes the image lighter; decreasing makes it darker. Contrast:Controls the difference between light and dark areas in the video. Higher contrast makes colors more vivid; lower contrast makes the image look flatter. Sharpness: Adjusts the clarity and edge detail of the image. Higher sharpness makes objects look more defined, while lower sharpness makes the image softer. |
+|  | OSD | Change camera name and date time location in live (Top/bottom/right left) |
+|  | Night Vision Mode | Change Night vision mode by selecting IR mode/Full-Color Mode/Smart Mode/Night vision off/IR Always ON |
+|  | Video Screen Flip | Rotates or flips the video (horizontal/vertical) to match the camera installation position (e.g., ceiling mount). |
+|  | Anti-Flicker | Reduces flickering caused by artificial lighting (50Hz/60Hz), making video smoother. |
+|  | Privacy Mode On/OFF | Turn on or Turn Off Privacy Mode in camera |
+| Volume Settings | Volume Settings | Adjusts the camera speaker volume for alerts, siren, and two-way audio. |
+| Detection Alarm Settings | Motion Detection Alarm On/Off | Triggers an alert/notification when motion is detected in the camera view. |
+|  | Alarm Sensitivity Level | Controls how sensitive the motion detection is (low = fewer alerts, high = more alerts). |
+|  | Activity Area | Lets you select a specific area in the frame where motion detection will work. |
+|  | Human Body Filtering On/Off | Uses AI to detect only human movement, reducing false alerts from animals or objects. |
+|  | Motion Tracking On/Off | Automatically follows moving objects by rotating the camera (for PTZ cameras). |
+|  | Human Body Detection Frame On/Off | Highlights detected objects with a box/outline in the video. |
+|  | Motion Detection Schedule | Set specific time periods when features like detection or recording are active. |
+|  | White Light Alarm | Give alerts (siren+white light LED flashing) |
+|  | Trigger Siren On/Off | Automatically activates the siren when motion or sound is detected. |
+|  | Siren Volume | Adjusts the loudness of the siren. |
+|  | White Light Alarm | Turn on/off White light of camera when motion/human detected |
+| Storage Settings | Total Capacity | Shows the total storage size of the SD card. |
+|  | Used Capacity | Displays how much storage is already used. |
+|  | Remaining Capacity | Shows how much storage space is left. |
+|  | Download Files from SD card | Download the files from SD card shown in application |
+|  | Format SD Card | Erases all data and resets the SD card for fresh use. |
+| Recording Settings | Recording Sound | Enable or disable sound from Live view and playback |
+|  | Loop recording | Automatically overwrites old recordings when storage is full. |
+|  | Recording Mode | Choose recording type: continuous, motion-based, or scheduled. |
+|  | Recording Schedule | Enable or disable Recording schedule and Set specific time slots for recording. |
+| Advanced Setting | Status Indicator | Indicator Light On/Off button |
+|  | Time Zone Setting | Change the caemra Time Zone |
+|  | Time Synchronization | Sync the camera time with Phone time |
+|  | Change Wi-Fi | Change Wi-Fi Network of online camera |
+|  | Device Sound Volume | Set the device volume (speaker output) |
+|  | RTMP | RTMP ON/OFF button, after turning on need RTMP URL option |
+|  | Device Voice Prompot | Device prompt on/off button |
+| Onvif | Onvif Switch | Onvif ON/OFF button |
+|  | IP | Camera IP |
+|  | Reset Password | Set new password/Change Password |
+| Third Party Supported | Google/Alexa | Link the device with Google/Alexa |
+| Message Notification | Push Notification | Turn ON/OFF push notification |
+|  | Notification Interval | Set Interval to reduce the flow of alarm messages |
+|  | Notification Schedule | Set the specific time slot for alarm message |
+| Device Information | Model | Show camera model number |
+|  | Cloud ID | Check camera Device ID |
+|  | Firmware Version | Show Firmware version Show New firmware available on OTA Automatic Upgrade ON/OFF button Upgrade Schedule ON/OFF button and Set the specific time to OTA update the camera |
+|  | Connected Wf-Fi | show the connected wifi name |
+|  | Wi-Fi Signal Strength | show wifi signal strength |
+|  | IP Address | show camera IP address |
+|  | MAC Address | Check camera MAC address |
+|  | App Component Code | Check app component code to verify the camera firwmare build |
+| Offline Notification | Offline Notification Button | Sends alert when the camera goes offline/disconnected. |
+| Share Device | Add Sharing | Share camera access with others |
+| Restart the Camera | Restart Device | Reboot the camera |
+| Delete and Reset Camera | Remove Device | Remove the camera and reset |

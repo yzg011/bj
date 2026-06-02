@@ -1,0 +1,22 @@
+name: 友链失效巡检
+on:
+  schedule:
+    - cron: '0 0 * * *'
+  workflow_dispatch:
+
+jobs:
+  check-friends:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: 安装依赖
+        run: npm install axios
+      - name: 执行友链检测脚本
+        run: node .github/scripts/check-friends.js
+      - name: 提交更新
+        run: |
+          git config --global user.name "FriendBot"
+          git config --global user.email "bot@com.z2m.store"
+          git add .
+          git commit -m "🤖 清理失效友链" || echo "无失效友链"
+          git push
