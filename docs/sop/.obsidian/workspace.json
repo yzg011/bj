@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "5500d1a292eab6cb",
+        "id": "f2e92729abca5407",
         "type": "tabs",
         "children": [
           {
-            "id": "334e458ea276177f",
+            "id": "c5695c379269dfbb",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -191,10 +191,10 @@
       "astro-composer:打开项目终端": false
     }
   },
-  "active": "334e458ea276177f",
+  "active": "c5695c379269dfbb",
   "lastOpenFiles": [
-    "stqc-clause-11-and-13-requirements-tracker.md",
     "camera-function.md",
+    "stqc-clause-11-and-13-requirements-tracker.md",
     "部署Twikoo到cloudflaer.md",
     "4-g.md",
     "more.md",
