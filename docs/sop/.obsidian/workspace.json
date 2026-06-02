@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "a7d46702528cdae0",
+        "id": "5500d1a292eab6cb",
         "type": "tabs",
         "children": [
           {
-            "id": "f6d58e63952f7a92",
+            "id": "334e458ea276177f",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -191,7 +191,7 @@
       "astro-composer:打开项目终端": false
     }
   },
-  "active": "f6d58e63952f7a92",
+  "active": "334e458ea276177f",
   "lastOpenFiles": [
     "stqc-clause-11-and-13-requirements-tracker.md",
     "camera-function.md",
