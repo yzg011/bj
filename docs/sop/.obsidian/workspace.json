@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "888f4faf73ab4f6d",
+        "id": "beb5c1a330c376ad",
         "type": "tabs",
         "children": [
           {
-            "id": "07da57c4c800ec19",
+            "id": "a84ed3ad39d40f42",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -70,8 +70,7 @@
               "title": "书签"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -192,8 +191,9 @@
       "astro-composer:打开项目终端": false
     }
   },
-  "active": "07da57c4c800ec19",
+  "active": "a84ed3ad39d40f42",
   "lastOpenFiles": [
+    "ac3000.md",
     "htmltomd.md",
     "camera-function.md",
     "stqc-clause-11-and-13-requirements-tracker.md",
@@ -221,7 +221,6 @@
     "_cloudflare.md",
     "quickStart.md",
     "w11-faq.md",
-    "tuya5-g-wifi.md",
     ".md"
   ]
 }
