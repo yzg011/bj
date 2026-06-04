@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "beb5c1a330c376ad",
+        "id": "8e0d35a9f9971b42",
         "type": "tabs",
         "children": [
           {
-            "id": "a84ed3ad39d40f42",
+            "id": "7fbec510992b2c2d",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -191,8 +191,9 @@
       "astro-composer:打开项目终端": false
     }
   },
-  "active": "a84ed3ad39d40f42",
+  "active": "7fbec510992b2c2d",
   "lastOpenFiles": [
+    "screen-update.md",
     "ac3000.md",
     "htmltomd.md",
     "camera-function.md",
@@ -220,7 +221,6 @@
     "打赏.md",
     "_cloudflare.md",
     "quickStart.md",
-    "w11-faq.md",
     ".md"
   ]
 }
