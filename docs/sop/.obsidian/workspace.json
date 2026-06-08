@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "9f5f491fbbd7ba1a",
+        "id": "1067909c48252286",
         "type": "tabs",
         "children": [
           {
-            "id": "439cf034612dd142",
+            "id": "e346dead0d911637",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -191,8 +191,9 @@
       "astro-composer:打开项目终端": false
     }
   },
-  "active": "439cf034612dd142",
+  "active": "e346dead0d911637",
   "lastOpenFiles": [
+    "parts-of-camera.md",
     "ip-camera-open-points.md",
     "screen-update.md",
     "ac3000.md",
@@ -220,7 +221,6 @@
     "butterfly.md",
     "discuss.md",
     "打赏.md",
-    "_cloudflare.md",
     ".md"
   ]
 }
