@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "1067909c48252286",
+        "id": "213f797c42d31d2b",
         "type": "tabs",
         "children": [
           {
-            "id": "e346dead0d911637",
+            "id": "f8079908bd3aee4e",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -191,7 +191,7 @@
       "astro-composer:打开项目终端": false
     }
   },
-  "active": "e346dead0d911637",
+  "active": "f8079908bd3aee4e",
   "lastOpenFiles": [
     "parts-of-camera.md",
     "ip-camera-open-points.md",
