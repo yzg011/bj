@@ -10,42 +10,14 @@ sidebar: false
 # 友情链接
 
 <script setup>
-  // 业界大佬
+  // 博主自己
   const authoritys = [
-    {
-      avatar: "https://q1.qlogo.cn/g?b=qq&nk=20447289&s=640",
-      name: "番茄主理人",
-      desc: "坐而言不如起而行. ",
-      link: "https://fqzlr.com/ ",
-    },
-  ];
-  // 互联好友
-  const friends = [
-    {
-      avatar: "https://img.z2m.store/file/public/1778862620159_g.png",
-      name: "个人主页",
-      desc: "读史可以明智,知古方能鉴今。",
-      link: "https://home.z2m.store",
-    },
     {
       avatar: "https://img.z2m.store/file/public/1778862620159_g.png",
       name: "个人博客",
       desc: "读史可以明智,知古方能鉴今。",
       link: "https://com.z2m.store",
     },
-    {
-      avatar: "https://img.z2m.store/file/public/1778862620159_g.png",
-      name: "小鱼钓猫🐱",
-      desc: "读史可以明智,知古方能鉴今。",
-      link: "https://blog.z2m.store",
-    },
-    {
-      avatar: "https://img.z2m.store/file/public/1779443156389_imglogo.png",
-      name: "免费图床",
-      desc: "永久免费图床",
-      link: "https://img.z2m.store",
-    },
-
   ];
 </script>
 
@@ -106,7 +78,7 @@ sidebar: false
 
 <div class="friends-section">
 
-## 🌟 业界大佬
+## 🌟 博主自己
 <div class="friends-card">
   <a v-for="item in authoritys" :href="item.link" target="_blank" class="friend-item">
     <img :src="item.avatar" />
@@ -128,15 +100,19 @@ sidebar: false
     </div>
   </a>
 </div>
-
 </div>
+
+<div id="container" style="overflow:hidden;">
+<iframe border="0" id="content" src="https://lk.z2m.store" frameborder="0" height="1500px" width="100%"></iframe>
+</div>
+
 
 
 
 
 ## 🔗 本站友链信息
 
-::: details 📝 友链申请格式（点击展开复制发评论即可）
+::: details 📝 本站友链格式（可直接复制）
     {
       avatar: "https://img.z2m.store/file/public/1778862620159_g.png",
       name: "小鱼钓猫🐱",
@@ -144,6 +120,7 @@ sidebar: false
       link: "https://blog.z2m.store",
     },
 :::
+
 
 ::: details ⚠️ 免责声明 {open}
 本博客遵守中华人民共和国相关法律。友情链接中的网站均为第三方站点，本站无法对其内容、域名变更、服务器安全等进行全程监管，访问风险由用户自行承担。若发现链接存在违法或不良内容，请及时联系：`yzg011@qq.com`，我会第一时间处理。
