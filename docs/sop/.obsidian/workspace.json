@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "213f797c42d31d2b",
+        "id": "c43ff0aa08c607a4",
         "type": "tabs",
         "children": [
           {
-            "id": "f8079908bd3aee4e",
+            "id": "d779601f28dbe8c9",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -191,8 +191,13 @@
       "astro-composer:打开项目终端": false
     }
   },
-  "active": "f8079908bd3aee4e",
+  "active": "d779601f28dbe8c9",
   "lastOpenFiles": [
+    "about.md",
+    "memos to cf.md",
+    "我们的祖国真的夹克式.md",
+    "1.md",
+    "123.md",
     "parts-of-camera.md",
     "ip-camera-open-points.md",
     "screen-update.md",
@@ -204,7 +209,6 @@
     "4-g.md",
     "more.md",
     "自动生成相册.md",
-    "about.md",
     "gir-rebase.md",
     "两块ESP32屏了解会议室状态.md",
     "印度STQC 流程和批准要求.md",
@@ -217,10 +221,6 @@
     "discuss - 副本.md",
     "Cloudflare Pages 部署免费图床 - 副本.md",
     "_cloudflare - 副本.md",
-    "4-g - 副本.md",
-    "butterfly.md",
-    "discuss.md",
-    "打赏.md",
     ".md"
   ]
 }
