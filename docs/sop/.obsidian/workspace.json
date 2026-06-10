@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "c43ff0aa08c607a4",
+        "id": "00f309047e9456e3",
         "type": "tabs",
         "children": [
           {
-            "id": "d779601f28dbe8c9",
+            "id": "ebbc229be8752cdb",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -191,8 +191,10 @@
       "astro-composer:打开项目终端": false
     }
   },
-  "active": "d779601f28dbe8c9",
+  "active": "ebbc229be8752cdb",
   "lastOpenFiles": [
+    "solar.md",
+    "cf 安装极简论坛.md",
     "about.md",
     "memos to cf.md",
     "我们的祖国真的夹克式.md",
@@ -219,8 +221,6 @@
     "converted_20260522T012116.md",
     "技术支持知识库.html",
     "discuss - 副本.md",
-    "Cloudflare Pages 部署免费图床 - 副本.md",
-    "_cloudflare - 副本.md",
     ".md"
   ]
 }
