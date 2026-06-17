@@ -17,10 +17,10 @@ onMounted(() => {
   // 全局配置
   const API_BASE = "https://ss.z2m.store"
   const PAGE_SIZE = 10
-  let pageToken = ""       // 游标令牌
-  let hasNext = false      // 是否有下一页
-  let hasPrev = false      // 是否有上一页
-  let prevTokenList = []   // 记录历史token，实现上一页
+  let currentToken = ""        // 当前页面游标（用于请求）
+  let nextPageToken = ""       // 接口返回的下一页游标
+  let prevTokenStack = []      // 历史游标栈，存放每一页的currentToken
+  let hasNext = false          // 是否有下一页
 
   const listBox = document.getElementById("memosList")
   const paginationBox = document.getElementById("pagePagination")
@@ -62,17 +62,18 @@ onMounted(() => {
     return `<img src="${url}" data-type="content" alt="图片" style="width:100%;height:auto;object-fit:contain;border-radius:8px;cursor:pointer;transition:transform 0.2s ease;background:#f5f5f5;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">`
   }
 
-  // 构造请求URL（对应你提供的 buildApiUrl 逻辑）
+  // 构造请求URL（你提供的 buildApiUrl 逻辑）
   const buildApiUrl = () => {
     let url = `${API_BASE}/api/v1/memos?pageSize=${PAGE_SIZE}&sort=createTime&order=desc`
-    if (pageToken) {
-      url += `&pageToken=${encodeURIComponent(pageToken)}`
+    if (currentToken) {
+      url += `&pageToken=${encodeURIComponent(currentToken)}`
     }
     return url
   }
 
-  // 渲染分页按钮（上一页 / 下一页）
+  // 渲染分页按钮
   const renderPagination = () => {
+    const hasPrev = prevTokenStack.length > 0
     if (!hasPrev && !hasNext) {
       paginationBox.innerHTML = ""
       return
@@ -91,22 +92,24 @@ onMounted(() => {
 
     paginationBox.innerHTML = btnHtml
 
-    // 上一页点击
+    // 上一页点击事件
     const prevBtn = document.getElementById("prevBtn")
     prevBtn && prevBtn.addEventListener("click", () => {
-      if (!hasPrev) return
-      // 取出上一页token
-      pageToken = prevTokenList.pop() || ""
+      if (prevTokenStack.length === 0) return
+      // 取出上一页游标，覆盖当前游标
+      currentToken = prevTokenStack.pop()
       loadData()
       window.scrollTo({ top: 0, behavior: 'smooth' })
     })
 
-    // 下一页点击
+    // 下一页点击事件
     const nextBtn = document.getElementById("nextBtn")
     nextBtn && nextBtn.addEventListener("click", () => {
       if (!hasNext) return
-      // 记录当前token，用于回退上一页
-      prevTokenList.push(pageToken)
+      // 切换下一页前：把当前页面游标存入历史栈
+      prevTokenStack.push(currentToken)
+      // 替换为下一页游标
+      currentToken = nextPageToken
       loadData()
       window.scrollTo({ top: 0, behavior: 'smooth' })
     })
@@ -125,10 +128,9 @@ onMounted(() => {
         try {
           const data = JSON.parse(xhr.responseText)
           const arr = Array.isArray(data.memos) ? data.memos : []
-          // 接口返回的下一页token & 是否还有下一页
-          pageToken = data.nextPageToken || ""
-          hasNext = !!pageToken
-          hasPrev = prevTokenList.length > 0
+          // 更新下一页游标
+          nextPageToken = data.nextPageToken || ""
+          hasNext = !!nextPageToken
 
           if (!arr.length) {
             listBox.innerHTML = '<div style="text-align:center;padding:2rem;color:var(--vp-c-text-2);">暂无说说</div>'
@@ -191,7 +193,7 @@ onMounted(() => {
     xhr.send()
   }
 
-  // 初始加载第一页
+  // 初始加载第一页（无游标）
   loadData()
 })
 </script>
