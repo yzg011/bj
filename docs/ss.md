@@ -3,18 +3,27 @@ title: 关于
 date: 2024-07-19 16:41:10
 type: "about"
 ---
-
 <div id="memosList" style="max-width:800px;margin:2rem auto;padding:0 1rem;">
   <div style="text-align:center;padding:2rem;color:var(--vp-c-text-2);">加载中...</div>
 </div>
+
+<!-- 分页按钮容器 -->
+<div id="pagePagination" style="max-width:800px;margin:1rem auto 3rem;padding:0 1rem;display:flex;justify-content:center;gap:10px;align-items:center;"></div>
 
 <script setup>
 import { onMounted } from 'vue'
 
 onMounted(() => {
-  const API = "https://ss.z2m.store/api/v1/memos?limit=20&sort=createTime&order=desc"
+  // 全局配置
+  const API_BASE = "https://ss.z2m.store"
+  const PAGE_SIZE = 10
+  let pageToken = ""       // 游标令牌
+  let hasNext = false      // 是否有下一页
+  let hasPrev = false      // 是否有上一页
+  let prevTokenList = []   // 记录历史token，实现上一页
+
   const listBox = document.getElementById("memosList")
-  let scrollTop = 0
+  const paginationBox = document.getElementById("pagePagination")
 
   // 兜底图
   const AVATAR_FALLBACK = "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iMjAiIGN5PSIyMCIgcj0iMjAiIGZpbGw9IiNlZWUiLz4KPHBhdGggZD0iTTE1IDI1QzE1IDIwLjU4MTcgMTguNTgxNyAxNyAyMyAxN1MyOSAyMC41ODE3IDI5IDI1QzI5IDI5LjQxODMgMjUuNDE4MyAzMyAyMSAzM1MxMyAyOS40MTgzIDEzIDI1QzEzIDIwLjU4MTcgMTYuNDE4MyAxNyAyMSAxN1MyOSAyMC41ODE3IDI5IDI1WiIgZmlsbD0iIzY2NiIvPgo8L3N2Zz4="
@@ -32,47 +41,6 @@ onMounted(() => {
     }
   }, true)
 
-  // 创建图片预览弹窗
-  const previewBox = document.createElement('div')
-  previewBox.style.cssText = `
-    position: fixed;left:0;top:0;width:100vw;height:100vh;
-    background:rgba(0,0,0,0.8);z-index:9999;display:none;
-    align-items:center;justify-content:center;
-  `
-  previewBox.innerHTML = `
-    <div style="width:90%;max-width:800px;text-align:center;">
-      <img id="previewImg" style="max-width:100%;max-height:80vh;border-radius:8px;object-fit:contain;" alt="大图预览">
-    </div>
-  `
-  document.body.appendChild(previewBox)
-  const previewImg = document.getElementById("previewImg")
-
-  // 打开预览
-  const openImg = (url) => {
-    previewImg.src = url
-    previewBox.style.display = 'flex'
-    scrollTop = window.scrollY || document.documentElement.scrollTop
-    document.documentElement.style.position = 'fixed'
-    document.documentElement.style.top = `-${scrollTop}px`
-    document.documentElement.style.width = '100%'
-  }
-  window.openImg = openImg
-
-  // 关闭预览
-  const closePreview = () => {
-    previewBox.style.display = 'none'
-    document.documentElement.style.position = ''
-    document.documentElement.style.top = ''
-    window.scrollTo(0, scrollTop)
-  }
-
-  previewBox.addEventListener("click", e => {
-    if (e.target === previewBox) closePreview()
-  })
-  document.addEventListener("keydown", e => {
-    if (e.key === "Escape") closePreview()
-  })
-
   // 时间格式化
   const formatTime = (s) => {
     if (!s) return "未知时间"
@@ -87,27 +55,87 @@ onMounted(() => {
     return `<img src="https://com.z2m.store/img/butterfly-icon.png" data-type="avatar" alt="avatar" style="width:100%;height:100%;object-fit:cover;">`
   }
 
-  // 生成内容图片HTML
+  // 生成内容图片HTML（使用VitePress原生预览）
   const getContentImgHtml = (att) => {
     if (!att || !att.uid || !att.filename) return ""
-    const url = `https://ss.z2m.store/file/attachments/${att.uid}/${att.filename}`
-    return `<img src="${url}" data-type="content" onclick="openImg('${url}')" alt="图片" style="width:100%;height:auto;object-fit:contain;border-radius:8px;cursor:pointer;transition:transform 0.2s ease;background:#f5f5f5;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">`
+    const url = `${API_BASE}/file/attachments/${att.uid}/${att.filename}`
+    return `<img src="${url}" data-type="content" alt="图片" style="width:100%;height:auto;object-fit:contain;border-radius:8px;cursor:pointer;transition:transform 0.2s ease;background:#f5f5f5;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">`
   }
 
-  // 请求接口
+  // 构造请求URL（对应你提供的 buildApiUrl 逻辑）
+  const buildApiUrl = () => {
+    let url = `${API_BASE}/api/v1/memos?pageSize=${PAGE_SIZE}&sort=createTime&order=desc`
+    if (pageToken) {
+      url += `&pageToken=${encodeURIComponent(pageToken)}`
+    }
+    return url
+  }
+
+  // 渲染分页按钮（上一页 / 下一页）
+  const renderPagination = () => {
+    if (!hasPrev && !hasNext) {
+      paginationBox.innerHTML = ""
+      return
+    }
+    let btnHtml = ""
+    // 上一页
+    btnHtml += `<button 
+      id="prevBtn"
+      style="padding:6px 14px;border-radius:6px;border:none;background:var(--vp-c-bg-soft);cursor:pointer;${!hasPrev ? 'opacity:0.5;cursor:not-allowed;' : ''}"
+      ${!hasPrev ? 'disabled' : ''}>上一页</button>`
+    // 下一页
+    btnHtml += `<button 
+      id="nextBtn"
+      style="padding:6px 14px;border-radius:6px;border:none;background:var(--vp-c-bg-soft);cursor:pointer;${!hasNext ? 'opacity:0.5;cursor:not-allowed;' : ''}"
+      ${!hasNext ? 'disabled' : ''}>下一页</button>`
+
+    paginationBox.innerHTML = btnHtml
+
+    // 上一页点击
+    const prevBtn = document.getElementById("prevBtn")
+    prevBtn && prevBtn.addEventListener("click", () => {
+      if (!hasPrev) return
+      // 取出上一页token
+      pageToken = prevTokenList.pop() || ""
+      loadData()
+      window.scrollTo({ top: 0, behavior: 'smooth' })
+    })
+
+    // 下一页点击
+    const nextBtn = document.getElementById("nextBtn")
+    nextBtn && nextBtn.addEventListener("click", () => {
+      if (!hasNext) return
+      // 记录当前token，用于回退上一页
+      prevTokenList.push(pageToken)
+      loadData()
+      window.scrollTo({ top: 0, behavior: 'smooth' })
+    })
+  }
+
+  // 加载数据
   const loadData = () => {
+    listBox.innerHTML = '<div style="text-align:center;padding:2rem;color:var(--vp-c-text-2);">加载中...</div>'
+    const url = buildApiUrl()
     const xhr = new XMLHttpRequest()
     xhr.timeout = 8000
-    xhr.open("GET", API, true)
-    xhr.onload = function() {
+    xhr.open("GET", url, true)
+
+    xhr.onload = function () {
       if (xhr.status >= 200 && xhr.status < 300) {
         try {
           const data = JSON.parse(xhr.responseText)
           const arr = Array.isArray(data.memos) ? data.memos : []
+          // 接口返回的下一页token & 是否还有下一页
+          pageToken = data.nextPageToken || ""
+          hasNext = !!pageToken
+          hasPrev = prevTokenList.length > 0
+
           if (!arr.length) {
             listBox.innerHTML = '<div style="text-align:center;padding:2rem;color:var(--vp-c-text-2);">暂无说说</div>'
+            renderPagination()
             return
           }
+
           let html = ""
           arr.forEach(item => {
             const content = item.content || ""
@@ -121,6 +149,7 @@ onMounted(() => {
               })
               imgStr += "</div>"
             }
+
             html += `
               <div style="display:flex;gap:12px;background:var(--vp-c-bg-soft);border-radius:12px;padding:16px;margin-bottom:12px;box-shadow:0 2px 8px rgba(0,0,0.08);">
                 <div style="flex-shrink:0;width:40px;height:40px;border-radius:50%;overflow:hidden;background:#eee;">
@@ -138,22 +167,31 @@ onMounted(() => {
             `
           })
           listBox.innerHTML = html
+          renderPagination()
         } catch (e) {
           listBox.innerHTML = `<div style="text-align:center;padding:2rem;color:var(--vp-c-text-2);">数据解析失败：${e.message}</div>`
+          paginationBox.innerHTML = ""
         }
       } else {
         listBox.innerHTML = `<div style="text-align:center;padding:2rem;color:var(--vp-c-text-2);">请求失败，状态码：${xhr.status}</div>`
+        paginationBox.innerHTML = ""
       }
     }
+
     xhr.onerror = () => {
       listBox.innerHTML = '<div style="text-align:center;padding:2rem;color:var(--vp-c-text-2);">网络错误/跨域拦截</div>'
+      paginationBox.innerHTML = ""
     }
+
     xhr.ontimeout = () => {
       listBox.innerHTML = '<div style="text-align:center;padding:2rem;color:var(--vp-c-text-2);">请求超时</div>'
+      paginationBox.innerHTML = ""
     }
+
     xhr.send()
   }
 
-  setTimeout(loadData, 100)
+  // 初始加载第一页
+  loadData()
 })
 </script>
