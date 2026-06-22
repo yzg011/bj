@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "00f309047e9456e3",
+        "id": "d9695cf8d27029af",
         "type": "tabs",
         "children": [
           {
-            "id": "ebbc229be8752cdb",
+            "id": "1f1819e537acafbf",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -191,8 +191,11 @@
       "astro-composer:打开项目终端": false
     }
   },
-  "active": "ebbc229be8752cdb",
+  "active": "1f1819e537acafbf",
   "lastOpenFiles": [
+    "hass-emqx.md",
+    "zigbee2mqtt-install.md",
+    "未命名.md",
     "solar.md",
     "cf 安装极简论坛.md",
     "about.md",
@@ -216,11 +219,8 @@
     "印度STQC 流程和批准要求.md",
     "印度STQC认证所需文件.md",
     "开启评论.md",
-    "发布指令.md",
     ".md",
-    "converted_20260522T012116.md",
     "技术支持知识库.html",
-    "discuss - 副本.md",
     ".md"
   ]
 }
