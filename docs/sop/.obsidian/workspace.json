@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "d9695cf8d27029af",
+        "id": "d4cf54f9e90915ec",
         "type": "tabs",
         "children": [
           {
-            "id": "1f1819e537acafbf",
+            "id": "e2a5fae2163214ec",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -191,8 +191,9 @@
       "astro-composer:打开项目终端": false
     }
   },
-  "active": "1f1819e537acafbf",
+  "active": "e2a5fae2163214ec",
   "lastOpenFiles": [
+    "portainer.md",
     "hass-emqx.md",
     "zigbee2mqtt-install.md",
     "未命名.md",
@@ -218,7 +219,6 @@
     "两块ESP32屏了解会议室状态.md",
     "印度STQC 流程和批准要求.md",
     "印度STQC认证所需文件.md",
-    "开启评论.md",
     ".md",
     "技术支持知识库.html",
     ".md"
