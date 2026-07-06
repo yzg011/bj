@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "235d783bcc131877",
+        "id": "5f00e89c8a4f30fc",
         "type": "tabs",
         "children": [
           {
-            "id": "908376226b68edc8",
+            "id": "c42a62aa84e07caa",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -191,8 +191,9 @@
       "astro-composer:打开项目终端": false
     }
   },
-  "active": "908376226b68edc8",
+  "active": "c42a62aa84e07caa",
   "lastOpenFiles": [
+    "dh.md",
     "taiscale.md",
     "hass-emqx.md",
     "portainer.md",
@@ -218,7 +219,6 @@
     "自动生成相册.md",
     "gir-rebase.md",
     "两块ESP32屏了解会议室状态.md",
-    "印度STQC 流程和批准要求.md",
     ".md",
     "技术支持知识库.html",
     ".md"
