@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "5f00e89c8a4f30fc",
+        "id": "14d6703fb28cf1f9",
         "type": "tabs",
         "children": [
           {
-            "id": "c42a62aa84e07caa",
+            "id": "d80b306058271bbc",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -191,14 +191,19 @@
       "astro-composer:打开项目终端": false
     }
   },
-  "active": "c42a62aa84e07caa",
+  "active": "d80b306058271bbc",
   "lastOpenFiles": [
+    "miaoda-cf-build.md",
+    "未命名",
+    "wecha-database.md",
+    "mcar.md",
+    "miaoda.md",
+    "未命名 1.md",
     "dh.md",
     "taiscale.md",
     "hass-emqx.md",
     "portainer.md",
     "zigbee2mqtt-install.md",
-    "未命名.md",
     "solar.md",
     "cf 安装极简论坛.md",
     "about.md",
@@ -215,10 +220,6 @@
     "stqc-clause-11-and-13-requirements-tracker.md",
     "部署Twikoo到cloudflaer.md",
     "4-g.md",
-    "more.md",
-    "自动生成相册.md",
-    "gir-rebase.md",
-    "两块ESP32屏了解会议室状态.md",
     ".md",
     "技术支持知识库.html",
     ".md"
