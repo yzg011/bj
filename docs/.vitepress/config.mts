@@ -59,8 +59,9 @@ export default defineConfig({
 	  { text: '朋友圈', link: '../py.md' },
 	  { text: '碎碎念', link: '../talk.md' },
 	  { text: '说说', link: '../ss.md' },
+	  { text: '发布说说', link: 'https://ss.z2m.store/explore' },
 	  { text: '友链', link: '../friends.md' },
-      { text: '关于作者', link: '../about.md' }
+      { text: '关于', link: '../about.md' }
     ],
     socialLinks: [
       {
