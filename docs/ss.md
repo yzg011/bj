@@ -3,7 +3,57 @@ title: 关于
 date: 2024-07-19 16:41:10
 type: "about"
 ---
+
+<!-- 液态玻璃发布按钮 固定右上角 -->
+<div style="position:fixed;top:90px;left:74%;z-index:800;">
+  <a 
+    href="https://ss.z2m.store" 
+    target="_blank"
+    style="
+      display:flex;
+      align-items:center;
+      gap:8px;
+      padding:12px 20px;
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      background: rgba(255,255,255,0.18);
+      border: 1px solid rgba(255,255,255,0.25);
+      border-radius:999px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.08), inset 0 0 12px rgba(255,255,255,0.1);
+      color: var(--vp-c-text-1);
+      font-weight:500;
+      font-size:14px;
+      cursor:pointer;
+      transition: all 0.3s cubic-bezier(0.4,0,0.2,1);
+      text-decoration:none;
+    "
+    onmouseover="
+      this.style.background='rgba(255,255,255,0.28)';
+      this.style.transform='translateY(-4px) scale(1.03)';
+      this.style.boxShadow='0 8px 32px rgba(0,0,0,0.12), inset 0 0 16px rgba(255,255,255,0.15)';
+    "
+    onmouseout="
+      this.style.background='rgba(255,255,255,0.18)';
+      this.style.transform='translateY(0) scale(1)';
+      this.style.boxShadow='0 4px 24px rgba(0,0,0,0.08), inset 0 0 12px rgba(255,255,255,0.1)';
+    "
+  >
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="12" y1="5" x2="12" y2="19"></line>
+      <line x1="5" y1="12" x2="19" y2="12"></line>
+    </svg>
+    发布说说
+  </a>
+</div>
+
+
+
+
+
+
+
 <div id="memosList" style="max-width:800px;margin:2rem auto;padding:0 1rem;">
+
   <div style="text-align:center;padding:2rem;color:var(--vp-c-text-2);">加载中...</div>
 </div>
 
