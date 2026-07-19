@@ -77,15 +77,7 @@ export default defineConfig({
           type: 'simple',
           aliPayQR: 'https://img.z2m.store/file/public/1778862804232_650.jpeg',
           weChatQR: 'https://img.z2m.store/file/public/1778862803338_74ffc28ec36caf0f44dd90b066a20561.jpeg'
-          }),
-      giscusPlugin({
-        repo: 'yzg011/homepage',
-        repoId: 'R_kgDOScMRQQ',
-        category: 'General',
-        categoryId: 'DIC_kwDOScMRQc4C9dup',
-        mapping: 'pathname',
-        // ...其他 giscus 配置
-      })		  
+          })  
 		  
 		  
 		  
