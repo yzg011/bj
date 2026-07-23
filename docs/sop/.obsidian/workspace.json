@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "d08e7db1fde6caae",
+        "id": "a076631801cd5787",
         "type": "tabs",
         "children": [
           {
-            "id": "bf902bf809909a4a",
+            "id": "86fe6b980fb8dcaf",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -191,8 +191,16 @@
       "astro-composer:打开项目终端": false
     }
   },
-  "active": "bf902bf809909a4a",
+  "active": "86fe6b980fb8dcaf",
   "lastOpenFiles": [
+    "aslr.md",
+    "security-engines-usage.md",
+    "keygeneration.md",
+    "hsm_otp_secure_boot_en.md",
+    "trust-boot.md",
+    "camera-function.md",
+    "camera audio.md",
+    "未命名.md",
     "database.md",
     "memos-transfer.md",
     "_worker.zip",
@@ -201,7 +209,6 @@
     "wecha-database.md",
     "mcar.md",
     "miaoda.md",
-    "未命名 1.md",
     "dh.md",
     "taiscale.md",
     "hass-emqx.md",
@@ -214,13 +221,6 @@
     "我们的祖国真的夹克式.md",
     "1.md",
     "123.md",
-    "parts-of-camera.md",
-    "ip-camera-open-points.md",
-    "screen-update.md",
-    "ac3000.md",
-    "htmltomd.md",
-    "camera-function.md",
-    "stqc-clause-11-and-13-requirements-tracker.md",
     ".md",
     "技术支持知识库.html",
     ".md"
