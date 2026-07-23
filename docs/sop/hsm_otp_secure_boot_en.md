@@ -50,7 +50,7 @@ The HSM answers “who is authorized to sign?” Only the private key protected 
 
 OTP answers “which public key shall the device trust?” Once the public-key digest is locked in OTP, modifying both the firmware and a public key in Flash cannot make a replacement key trusted.
 
-![rts3917_sec_boot public key in the HSM](image/sds/1784794756801.png)
+
 
 ## 3. Signing Firmware with the HSM Private Key
 
@@ -215,7 +215,7 @@ openssl dgst -sha256 -binary \
 
 DER is the canonical binary ASN.1 encoding of the public-key structure. Hashing DER avoids differences caused by PEM line wrapping or Base64 formatting.
 
-![Public key in the firmware build directory](image/sds/1784795216097.png)
+
 
 The current SHA-256 value of `verity_key0.der` is:
 
@@ -256,7 +256,6 @@ The bytes have the following meanings:
 
 `144` is the logical data offset before preceding ECC insertion. `(0160)` is the physical display position after earlier ECC layout is included;
 
-![Public-key digest and ECC in device OTP](image/sds/1784795105284.png)
 
 `--ipc_lock` sets the lock bit. After locking, the digest cannot be replaced with the digest of another public key.
 

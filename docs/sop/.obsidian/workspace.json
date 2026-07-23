@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "a076631801cd5787",
+        "id": "637ac651d7823795",
         "type": "tabs",
         "children": [
           {
-            "id": "86fe6b980fb8dcaf",
+            "id": "92035f04485ef5bd",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -191,12 +191,12 @@
       "astro-composer:打开项目终端": false
     }
   },
-  "active": "86fe6b980fb8dcaf",
+  "active": "92035f04485ef5bd",
   "lastOpenFiles": [
+    "hsm_otp_secure_boot_en.md",
     "aslr.md",
     "security-engines-usage.md",
     "keygeneration.md",
-    "hsm_otp_secure_boot_en.md",
     "trust-boot.md",
     "camera-function.md",
     "camera audio.md",
