@@ -60,12 +60,11 @@ The build environment connects to the HSM using `HSM_SERVER_IP` and `HSM_TOKEN`.
 
 Relevant files:
 
-- [`setup.sh`](../../setup.sh)
-- [`sign_partition.py`](../../chip/rts3917/build_security_image/sign_partition.py)
+
 
 #### 3.2 Signed objects and algorithms
 
-[`gensignature.sh`](../../chip/rts3917/build_security_image/gensignature.sh) uses the HSM key named `rts3917_sec_boot`:
+ uses the HSM key named `rts3917_sec_boot`:
 
 | Boot object  | Data that is signed                       | HSM algorithm                           |
 | ------------ | ----------------------------------------- | --------------------------------------- |
@@ -100,7 +99,7 @@ digest = SHA256(firmware_data)
 signature = RSA_Sign(HSM_private_key, digest)
 ```
 
-The overall order in [`run.sh`](../../chip/rts3917/build_security_image/run.sh) is:
+The overall order in 
 
 ```text
 Collect images
@@ -197,7 +196,7 @@ chip/rts3917/build_security_image/public_key/rts3917_sec_boot.pem
 
 #### 5.2 Converting PEM to DER and calculating SHA-256
 
-[`public_key/get_hash.sh`](../../chip/rts3917/build_security_image/public_key/get_hash.sh) executes:
+ executes:
 
 ```bash
 cp rts3917_sec_boot.pem verity_key0.pem
@@ -225,7 +224,7 @@ The current SHA-256 value of `verity_key0.der` is:
 
 #### 5.3 Programming and locking OTP
 
-The device startup script [`app_init.sh`](../../chip/rts3917/fw/app/init/app_init.sh) executes:
+The device startup script 
 
 ```sh
 otp_mfg --ipc_verify

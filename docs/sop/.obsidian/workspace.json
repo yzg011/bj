@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "637ac651d7823795",
+        "id": "8e8cba3f536972cb",
         "type": "tabs",
         "children": [
           {
-            "id": "92035f04485ef5bd",
+            "id": "03c97ac9638f215a",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -191,7 +191,7 @@
       "astro-composer:打开项目终端": false
     }
   },
-  "active": "92035f04485ef5bd",
+  "active": "03c97ac9638f215a",
   "lastOpenFiles": [
     "hsm_otp_secure_boot_en.md",
     "aslr.md",
