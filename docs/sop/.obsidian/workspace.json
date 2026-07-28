@@ -11,10 +11,14 @@
             "id": "8035f7751fcb0566",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "builr-fw.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "新标签页"
+              "title": "builr-fw"
             }
           }
         ]
@@ -49,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#html转md文件",
+                "query": "tag:#First",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -70,7 +74,8 @@
               "title": "书签"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -191,7 +196,7 @@
       "astro-composer:打开项目终端": false
     }
   },
-  "active": "8035f7751fcb0566",
+  "active": "9dea8e01d63e592d",
   "lastOpenFiles": [
     "builr-fw.md",
     "blog添加algolia搜索.md",

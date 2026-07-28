@@ -8,7 +8,7 @@ tags: []
 # setup build env
 
 1. First, unzip openhsm, then execute ./run.sh in the terminal.  
-2. Enter <http://localhost:8080/> in the browser to open the HSM server, and click "Token Management" to manage tokens.  
+2. Enter localhost:8080 in the browser to open the HSM server, and click "Token Management" to manage tokens.  
 3. Open the code and modify the token in setup.sh, for example:  
 export HSM_TOKEN='dc2bb143a28832603da0f176aba237f94698d656f3c43525cff186b2de947166'
 
