@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "8e8cba3f536972cb",
+        "id": "6f1ace021cf35391",
         "type": "tabs",
         "children": [
           {
-            "id": "03c97ac9638f215a",
+            "id": "28122bd2f6052878",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -191,8 +191,12 @@
       "astro-composer:打开项目终端": false
     }
   },
-  "active": "03c97ac9638f215a",
+  "active": "28122bd2f6052878",
   "lastOpenFiles": [
+    "pi-install-picoclaw.md",
+    "builr-fw.md",
+    "未命名 1.md",
+    "未命名.md",
     "hsm_otp_secure_boot_en.md",
     "aslr.md",
     "security-engines-usage.md",
@@ -200,7 +204,6 @@
     "trust-boot.md",
     "camera-function.md",
     "camera audio.md",
-    "未命名.md",
     "database.md",
     "memos-transfer.md",
     "_worker.zip",
@@ -218,9 +221,6 @@
     "cf 安装极简论坛.md",
     "about.md",
     "memos to cf.md",
-    "我们的祖国真的夹克式.md",
-    "1.md",
-    "123.md",
     ".md",
     "技术支持知识库.html",
     ".md"
