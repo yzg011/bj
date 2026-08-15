@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "ef15d3ced1891603",
+        "id": "85814ab23ecae35e",
         "type": "tabs",
         "children": [
           {
-            "id": "d3ed5d0b8aa1687c",
+            "id": "0c2f1bbf348d9f33",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -193,10 +193,12 @@
       "astro-composer:打开项目终端": false
     }
   },
-  "active": "d3ed5d0b8aa1687c",
+  "active": "0c2f1bbf348d9f33",
   "lastOpenFiles": [
-    "builr-fw.md",
+    "dashboard.md",
     "memos-bot.md",
+    "memos to cf.md",
+    "builr-fw.md",
     "blog添加algolia搜索.md",
     "pi-install-picoclaw.md",
     "未命名 1.md",
@@ -221,8 +223,6 @@
     "portainer.md",
     "zigbee2mqtt-install.md",
     "solar.md",
-    "cf 安装极简论坛.md",
-    "about.md",
     ".md",
     "技术支持知识库.html",
     ".md"

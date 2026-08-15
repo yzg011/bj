@@ -98,7 +98,7 @@ export default {
 ### Interaction Commands
 
 - `/start <access_token>`: Start the bot with your Memos access token.
-- token这里写的就是memos token，在memos中建立
+-  这个是给机器人发token，这里写的就是memos token，在memos中建立
 - Send text messages: Save the message content as a memo.
 - Send files (photos, documents): Save the files as resources in a memo.
 - `/search <words>`: Search for the memos.
