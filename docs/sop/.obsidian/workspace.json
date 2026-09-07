@@ -4,17 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "85814ab23ecae35e",
+        "id": "2bf97d93cc0339db",
         "type": "tabs",
         "children": [
           {
-            "id": "0c2f1bbf348d9f33",
+            "id": "204bb76ba4dcb3c9",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "_cloudflare.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "新标签页"
+              "title": "_cloudflare"
             }
           }
         ]
@@ -193,8 +197,9 @@
       "astro-composer:打开项目终端": false
     }
   },
-  "active": "0c2f1bbf348d9f33",
+  "active": "204bb76ba4dcb3c9",
   "lastOpenFiles": [
+    "how-to-test-sd-card.md",
     "dashboard.md",
     "memos-bot.md",
     "memos to cf.md",
@@ -222,7 +227,6 @@
     "hass-emqx.md",
     "portainer.md",
     "zigbee2mqtt-install.md",
-    "solar.md",
     ".md",
     "技术支持知识库.html",
     ".md"
