@@ -13,25 +13,21 @@ export default {
   enhanceApp({ app }: EnhanceAppContext) {
     if (typeof document !== 'undefined') {
       const script = document.createElement('script')
-      script.dataset.hostId = "1"
-      script.dataset.autoReg = "true"
-      script.dataset.loginToken = ""
-      script.dataset.closeWidth = "52"
-      script.dataset.closeHeight = "52"
+      // TG挂件 data 属性（对应你 widget.js 的读取逻辑）
+      script.dataset.tgBotUrl = "https://ttg.z2m.store/sendMessage"
+      script.dataset.tgGetUrl = "https://ttg.z2m.store/getUpdates"
+      script.dataset.chatId = "8838248851"
+      script.dataset.themeColor = "#1fe1f9"
       script.dataset.openWidth = "380"
       script.dataset.openHeight = "680"
-      script.dataset.position = "right"
-      script.dataset.welcome = "欢迎来到小鱼钓猫🐱的博客"
-      script.dataset.themeColor = "#1fe1f9"
-      script.dataset.logo = "https://img.z2m.store/file/public/1778862620159_g.png"
+      script.dataset.welcome = "欢迎来到我的笔记📒博客"
       script.dataset.popupTitle = "需要帮助吗？"
-      script.dataset.popupSubtitle = "我们随时为您服务！"
-      script.dataset.popupImage = "https://img.z2m.store/file/public/1778862620159_g.png"
-      script.dataset.popupClosable = "true"
-      script.src = "https://lt.z2m.store/widget.js"
-      script.async = true
+      script.dataset.pollDelay = "1200"
+
+      script.src = "https://lk.z2m.store/widget.js"
+      // ❌ 删掉 async，动态创建脚本，不使用async，保证widget里document.currentScript可以拿到
+      // script.async = true
       document.body.appendChild(script)
     }
   }
 }
-
