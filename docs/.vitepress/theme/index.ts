@@ -25,8 +25,6 @@ export default {
       script.dataset.pollDelay = "1200"
 
       script.src = "https://lk.z2m.store/widget.js"
-      // ❌ 删掉 async，动态创建脚本，不使用async，保证widget里document.currentScript可以拿到
-      // script.async = true
       document.body.appendChild(script)
     }
   }
