@@ -21,7 +21,7 @@ export default {
       script.dataset.openWidth = "380"
       script.dataset.openHeight = "680"
       script.dataset.welcome = "欢迎来到我的笔记📒博客"
-      script.dataset.popupTitle = “TG聊天"
+      script.dataset.popupTitle = "TG聊天"
       script.dataset.pollDelay = "1200"
 
       script.src = "https://lk.z2m.store/widget.js"
