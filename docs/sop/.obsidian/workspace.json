@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "2bf97d93cc0339db",
+        "id": "b941dc1ebf15b05d",
         "type": "tabs",
         "children": [
           {
-            "id": "204bb76ba4dcb3c9",
+            "id": "f18243a9c77d6374",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "_cloudflare.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "_cloudflare"
+              "title": "新标签页"
             }
           }
         ]
@@ -197,8 +193,14 @@
       "astro-composer:打开项目终端": false
     }
   },
-  "active": "204bb76ba4dcb3c9",
+  "active": "f18243a9c77d6374",
   "lastOpenFiles": [
+    "_cloudflare.md",
+    "certificate-inventory.md",
+    "key-generation-and-provisioning.md",
+    "ota-update-signing-and-verification.md",
+    "otp-e-fuse-memory-structure.md",
+    "stqc-question.md",
     "how-to-test-sd-card.md",
     "dashboard.md",
     "memos-bot.md",
@@ -221,12 +223,6 @@
     "未命名",
     "wecha-database.md",
     "mcar.md",
-    "miaoda.md",
-    "dh.md",
-    "taiscale.md",
-    "hass-emqx.md",
-    "portainer.md",
-    "zigbee2mqtt-install.md",
     ".md",
     "技术支持知识库.html",
     ".md"
